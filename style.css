@@ -1,0 +1,604 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evitar el desplazamiento horizontal */
+}
+
+
+  /* Barra de navegación */
+nav {
+    position: fixed; /* Fija la barra en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(221, 217, 217, 0.7); /*Fondo semitransparente  rgba(221, 217, 217, 0.7)*/
+    padding: 10px 20px;
+    z-index: 1000; /* Asegura que esté sobre el fondo */
+    font-family: poopies;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative; /* Necesario para el menú desplegable */
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: black;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #918e8e;
+    border-radius: 5px;
+}
+nav ul li a img{
+    width: 30px;
+}
+
+/* Estilos para el botón de hamburguesa */
+.menu-toggle {
+    display: none; /* Ocultar por defecto */
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px; /* Ajusta el tamaño según lo necesites */
+}
+/* Estilos para el dropdown */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Muestra el menú al pasar el mouse */
+}
+
+.dropdown-menu {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 100%; /* Debajo del elemento padre */
+    left: 0;
+    background-color: #717070; /* Fondo del menú desplegable */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    width: 200px; /* Ancho fijo para el menú desplegable */
+}
+
+.dropdown-menu a {
+    padding: 10px;
+    color: white;
+    text-align: left;
+    border-bottom: 1px solid #555; /* Separador */
+}
+
+.dropdown-menu a:hover {
+    background-color: #918e8e;
+}
+
+.dropdown-menu li:last-child a {
+    border-bottom: none; /* Quita el borde del último elemento */
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostrar el botón en pantallas pequeñas */
+        color: #0e2a37;
+    }
+
+    nav ul {
+        display: none; /* Ocultar el menú por defecto */
+        flex-direction: column; /* Alinear verticalmente */
+        width: 100%; /* Asegúrate de que ocupe todo el ancho */
+        padding: 10px 0; /* Espaciado interno para la lista */
+    }
+
+    nav.active ul {
+        display: flex; /* Mostrar menú al activar */
+    }
+    .dropdown-menu {
+        position: static; /* Hace que el menú se ajuste al flujo normal */
+    }
+    
+}
+
+
+
+
+/*------------------------------------------HOME---------------------------------------*/
+.background {
+    width: 100%;
+    background-image: url('img/fondo4.jpg'); /* Ruta de tu imagen */
+    background-size: cover; /* Escala para cubrir todo */
+    background-position: center;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    position: relative;
+    z-index: 1; /* Coloca la imagen detrás de la barra */
+}
+
+.background h1 {
+    text-align: center;
+    color: #d9d9d9;
+    margin: 0;
+    padding-top: 350px; /* Ajusta el texto para que no quede debajo de la barra */
+    font-size: 2.6rem;
+    line-height:50px;
+}
+.background p{
+    text-align: center;
+    color: #d9d9d9;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+.background a{
+    text-decoration: none;
+    color: #d9d9d9;
+    text-align: center;
+}
+.background a li{
+    background-color: #0e2a37;
+    width: 200px;
+    border-radius: 50px;
+    padding: 10px;
+    margin: 0 auto;
+    list-style: none;
+    transition: 0.3s ease;
+}
+.background a li:hover{
+    background-color: red;
+
+}
+@media (max-width: 768px) {
+    body{
+         overflow-x: hidden; /* Evita desbordamientos horizontales */
+    }
+    .background{
+        width: 100%;
+
+    }
+    .background h1 {
+        font-size: 2rem;
+        padding-top: 300px; 
+    }
+
+}
+/*----------------------------------LENGUAJES--------------------------------*/
+#lenguajes{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content:center;
+    gap: 20px;
+    padding: 30px;
+}
+#lenguajes .lenguejes-box{
+    background-color:rgb(222, 219, 219);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: 0.5s ease;
+}
+#lenguajes .lenguejes-box:hover{
+    transform: scale(1.05); /* Agranda un 5% */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+#lenguajes .lenguejes-box p{
+    color: rgb(66, 42, 11);
+    font-weight: 600;
+}
+
+#lenguajes .lenguejes-box img{
+    margin: 25px;
+    width: 50px;
+}
+
+@media (max-width: 768px) {
+    #lenguajes .lenguejes-box{
+        width: 50px;
+        height: 50px;
+        
+    }
+    #lenguajes .lenguejes-box img{
+        width: 30px;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+}
+/*------------------------------------PROYECTOS---------------------------------------*/
+
+#proyectos{
+    width: 100%;
+    height: auto;
+    padding: 0 70px;
+    width: 100%;
+}
+#proyectos .content-prod a{
+    text-decoration: none;
+    color: black;
+    transition: 0.5s ease;
+}
+#proyectos .content-prod a:hover{
+    transform: scale(1.05); /* Agranda un 5% */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+#proyectos h2{
+    margin: 20px;
+    font-size: 2rem;
+
+}
+#proyectos .content-prod{
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+    
+
+}
+#proyectos .content-prod .proy-box {
+    padding: 10px;
+    box-shadow: 2px 2px 8px gray;
+    height: 300px;
+    
+}
+#proyectos .content-prod .proy-box img{
+    width: 100%;
+    height: 80%;
+    border: 1px solid rgb(207, 204, 204);
+}
+#proyectos .content-prod .proy-box h2{
+    color: black;
+}
+@media (max-width: 768px) {
+    #proyectos{
+        padding: 30px;
+    }
+}
+
+
+/*-------------------------------------------SOBRE MI--------------------------------*/
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Elimina cualquier desbordamiento horizontal */
+}
+
+#sobreMi {
+    margin-top: 30px;
+    width: 100%;
+    padding: 70px;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    opacity: 0; /* Invisible inicialmente */
+    transform: translateX(50vw); /* Fuera de la pantalla */
+    transition: transform 0.9s ease-out, opacity 1s ease-out;
+    visibility: hidden; /* Oculta visualmente sin afectar el flujo */
+    box-sizing: border-box; /* Padding incluido en el ancho total */
+    overflow: hidden; /* Oculta contenido desbordado */
+}
+
+#sobreMi.visible {
+    transform: translateX(0); /* Aparece en su lugar */
+    opacity: 1; /* Visible */
+    visibility: visible; /* Se muestra visualmente */
+}
+
+#sobreMi img {
+    width: 55%;
+    height: auto;
+}
+
+#sobreMi .sobreMi-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%; /* Asegura que se ajuste al ancho disponible */
+}
+
+#sobreMi .sobreMi-texto img {
+    width: 100%;
+    height: auto;
+}
+
+#sobreMi .sobreMi-texto p {
+    font-size: 1.2rem;
+    color: rgb(85, 81, 81);
+    line-height: 2.2rem;
+    text-align: justify;
+}
+
+#sobreMi .sobreMi-texto h2 {
+    color: rgb(89, 24, 24);
+    font-style: italic;
+    font-size: 3rem;
+}
+
+img {
+    max-width: 100%; /* Limita el ancho de las imágenes */
+    height: auto;
+    display: block; /* Evita márgenes extra alrededor */
+}
+
+@media (max-width: 768px) {
+    #sobreMi {
+        padding: 30px; /* Reduce padding en móviles */
+    }
+    #sobreMi img {
+        width: 40%; /* Imágenes se ajustan al ancho del contenedor */
+        height: auto;
+    }
+    #sobreMi .sobreMi-texto h2 {
+        font-size: 1.5rem; /* Texto más pequeño en móviles */
+    }
+    #sobreMi .sobreMi-texto p {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+}
+
+/*----------------------------------------------PIE DE PAGINA-------------------------------------------*/
+#pie {
+    background-color: #717070;
+    padding: 20px;
+    font-size: 0.9em;
+    padding: 30px;
+    color: rgb(234, 223, 210);
+    
+}
+#pie .contenido-pie{
+    display: flex;
+    justify-content: center;
+}
+#pie .contenido-pie .nombre{
+    display: flex;
+    align-items: center;
+}
+#pie .contenido-pie .nombre img{
+    width: 70px;
+    height: 70px;
+}
+
+#pie .contenido-pie .nombre .nombre-txt h2{
+    font-size: 2.5rem;
+}
+#pie .contenido-pie .nombre .nombre-txt p{
+    text-align: center;
+}
+
+#pie .contenido-pie .div{
+    display: flex;
+    gap: 60px;
+    width: 60%;
+    justify-content: center;
+}
+#pie .contenido-pie .div .contacto h2{
+    font-style: italic;
+    font-size: 1.8rem;
+}
+#pie .contenido-pie .div .contacto ul li{
+    font-size: 1.1rem;
+    margin: 5px;
+}
+#pie .contenido-pie .div .contacto span{
+    color: #1abc9c;
+}
+
+#pie .contenido-pie .div .enlaces h2{
+    font-style: italic;
+    font-size: 1.8rem;
+    margin: 0 10px;
+}
+#pie .contenido-pie .div .enlaces .img-enlaces{
+    display: flex;
+    gap: 20px;
+}
+#pie .contenido-pie .div .enlaces .img-enlaces img{
+    width: 50px;
+    height: 50px;
+    margin: 5px 0;
+}
+#pie .autor{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    #pie .contenido-pie{
+        display: block;
+    }
+    #pie .contenido-pie .nombre{
+        justify-content: center;
+    }
+    #pie .contenido-pie .nombre img{
+        width: 40px;
+    }
+    #pie .contenido-pie .nombre .nombre-txt h2 {
+        font-size: 1.7rem;
+    }
+    #pie .contenido-pie .nombre .nombre-txt p {
+        font-size: 1rem;
+    }
+
+    #pie .contenido-pie .div{
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        padding: 20px;
+    }
+
+
+    #pie .contenido-pie .div .contacto h2{
+        font-size: 1.2rem;
+    }
+    #pie .contenido-pie .div .contacto ul li{
+        font-size: 14px;
+    }
+
+    #pie .contenido-pie .div .enlaces h2{
+        font-size: 1.2rem;
+    }
+
+    #pie .contenido-pie .div .enlaces .img-enlaces img{
+        width: 50px;
+        height: 40px;
+    }
+    #pie .autor{
+        font-size: 0.8rem;
+    }
+}
+
+/*---------------------------------------PROYECTOS------------------------------*/
+.encabezado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(img/fondo2.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    height:55vh;
+    text-align: center;
+}
+.encabezado h2{
+    font-size: 3.3rem;
+    color: white;
+}
+.encabezado p{
+    color: white;
+    font-size: 1rem;
+}
+.encabezado img{
+    width: 100px;
+    height: 140px;
+}
+
+@media (max-width: 768px) {
+    .encabezado{
+        padding: 20px;
+        height: 80vh;
+    }
+    .encabezado h2{
+        font-size: 2rem;
+    }
+    .encabezado img{
+        width: 80px;
+        height: 120px;
+    }
+}
+#proyects{
+    background-color:white;
+    padding: 8vw;
+    text-align: left;
+}
+
+#proyects h2{
+    color: #0e2a37;
+    border-bottom: 4px solid #0e2a37;
+    font-size: 60px;
+    margin-bottom: 50px;
+}
+#proyects p{
+    color: black;
+    font-size: 1.2rem;
+    margin: 20px 0;
+    line-height: 1.5rem;
+    text-align: center;
+    font-family: Eras  ITC;
+}
+
+
+#proyects .proy img{
+    width: 100%;
+    height: auto;
+    border: 0.09px solid rgb(215, 212, 212);
+    margin-bottom: 10px;
+}
+
+
+#proyects .proy .proy-imgs{
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+grid-gap: 1rem;
+}
+
+#proyects .proy .proy-imgs img{
+    max-width: 100%;
+    height: 235px;
+    border: 0.09px solid rgb(215, 212, 212);
+}
+
+
+#proyects .proy .boton2 {
+    margin-top: 50px;
+    list-style-type: none;
+    text-align: center;
+    margin-bottom: 100px;
+}
+@media (max-width: 768px) {
+    #proyects .proy .boton2 {
+        margin-bottom: 50px;
+    }
+}
+
+
+#proyects .proy .boton2 li a{
+    padding: 15px 80px;
+    text-decoration: none;
+    background-color: transparent;
+    border: 3px solid #0e2a37;
+    color: #143443;
+    border-radius: 25px;
+    margin-top: 80px;
+
+}
+
+#proyects .proy .boton2 li a:hover{
+    opacity: 0.9;
+    background-color: #0e2a37;
+    border: solid #143443;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    #proyects .proy h2 {
+        font-size: 24px;
+    }
+
+    #proyects .proy p {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    #proyects .proy-imgs img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #proyects .boton2 li a {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        font-size: 14px;
+    }
+}

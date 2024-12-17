@@ -1,0 +1,204 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Bierstadt Display;
+    box-sizing: border-box;
+}
+
+  /* Barra de navegación */
+.navbar {
+    width: 95%;
+    margin: 0 auto;
+    background-color:rgb(246, 246, 231); /* Fondo con transparencia opcional */
+    padding: 2px 0;
+    position: fixed; /* Fija la barra en su posición */
+    top: 20px; /* Desplaza la barra hacia abajo */
+    left: 0;
+    right: 0;
+    z-index: 10; /* La pone encima del fondo */
+    border-radius: 20px;
+    /*border-bottom: 1px solid gray;*/
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: rgb(89, 24, 24);
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: orange;
+}
+.navbar ul li a img{
+    width: 30px;
+}
+
+.background {
+    background-image: url('img/fondo4.jpg'); /* Ruta de tu imagen */
+    background-size: cover; /* Escala para cubrir todo */
+    background-position: center;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    position: relative;
+    z-index: 1; /* Coloca la imagen detrás de la barra */
+}
+
+.background h1 {
+    text-align: center;
+    color: #d9d9d9;
+    margin: 0;
+    padding-top: 350px; /* Ajusta el texto para que no quede debajo de la barra */
+    font-size: 2.6rem;
+    line-height:50px;
+}
+.background p{
+    text-align: center;
+    color: #d9d9d9;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+.background a{
+    text-decoration: none;
+    color: #d9d9d9;
+    text-align: center;
+}
+.background a li{
+    background-color: #0e2a37;
+    width: 15%;
+    border-radius: 50px;
+    padding: 10px;
+    margin: 0 auto;
+    list-style: none;
+    transition: 0.3s ease;
+}
+.background a li:hover{
+    background-color: red;
+
+}
+/*----------------------------------CATEGORIAS--------------------------------*/
+#lenguajes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content:center;
+    gap: 20px;
+    padding: 30px;
+    background-color:  rgb(186, 185, 183);
+}
+#lenguajes .lenguejes-box{
+    text-align: center;
+    background-color:white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+#lenguajes .lenguejes-box p{
+    color: rgb(66, 42, 11);
+    font-weight: 600;
+}
+
+#lenguajes .lenguejes-box img{
+    margin-top: 30px;
+    width: 50px;
+}
+
+/*------------------------------------PROYECTOS---------------------------------------*/
+#proyectos{
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 20px;
+}
+
+#proyectos .proy-box{
+    flex: 1 1 30%;
+    text-align: center;
+}
+#proyectos .proy-box h3{
+    color: rgb(89, 24, 24);
+    font-size: 2.5rem;
+    font-style: italic;
+    line-height: 6rem;
+    
+}
+#proyectos .proy-box p{
+    color: rgb(57, 55, 55);
+    font-size: 1.2rem;
+}
+
+#proyectos .proy-box .proy-img{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+#proyectos .proy-box .proy-img img{
+    width: 30%;
+    height: 220px;
+    border: 1px solid rgb(212, 210, 210);
+}
+#proyectos .proy-box a{
+    text-decoration: none;
+    background-color:rgb(89, 24, 24);
+    color: white;
+    padding: 15px 50px;
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    margin-bottom: 60px;
+}
+
+/*-------------------------------------------SOBRE MI--------------------------------*/
+#sobreMi{
+    margin-top: 80px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: auto;
+}
+
+#sobreMi img{
+    width: 55%;
+    height: auto;
+}
+#sobreMi .sobreMi-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+#sobreMi .sobreMi-texto img{
+    width: 100%;
+    height: auto;
+}
+#sobreMi .sobreMi-texto p{
+    font-size: 1.2rem;
+    color: rgb(85, 81, 81);
+    line-height:2.2rem;
+}
+#sobreMi .sobreMi-texto  h2{
+    color: rgb(89, 24, 24);
+    font-style: italic;
+    font-size: 3rem;
+}

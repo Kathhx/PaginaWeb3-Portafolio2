@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portafolio</title>
+</head>
+<body>
+
+    <nav> 
+        <div class="menu-toggle">☰</div> <!-- Icono de hamburguesa -->
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="index.html"><img src="img/logo3.png" alt=""></a></li>
+            <li><a href="#sobreMi">Sobre Mi</a></li>
+            <li><a href="#pie">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
+
+    <section class="background">
+        <h1>Portafolio Personal</h1>
+        <p>Katherine Trujillo</p>
+        <a href="https://github.com/Kathhx"><li>Mi GitHub</li></a>
+    </section>
+
+    <section id="lenguajes">
+        <div class="lenguejes-box">
+            <img src="img/html.png" alt="">
+        </div>
+        <div class="lenguejes-box">
+            <img src="img/css.png" alt="">
+        </div>
+        <div class="lenguejes-box">
+            <img src="img/javascript.png" alt="">
+        </div>
+        <div class="lenguejes-box">
+            <img src="img/php.png" alt="">
+        </div>
+        <div class="lenguejes-box">
+            <img src="img/java.png" alt="">
+        </div>
+        <div class="lenguejes-box">
+            <img src="img/c++.png" alt="">
+        </div>
+
+    </section>
+
+    <section id="proyectos">
+        <h2>Proyectos</h2>
+        <div class="content-prod">
+            <a href="proyecto1.html">
+                <div class="proy-box">
+                    <img src="img/proyecto1.png" alt="">
+                    <h3>Página web</h3>
+                    <p>Lenguajes: HTML, CSS Y PHP</p>
+                </div>
+            </a>
+            <a href="proyecto2.html">
+                <div class="proy-box">
+                    <img src="img/proyecto2.png" alt="">
+                    <h3>Aplicación de escritorio</h3>
+                    <p>Lenguaje: Java</p>
+                </div>
+            </a>
+            <a href="proyecto3.html">
+                <div class="proy-box">
+                    <img src="img/proyecto7.png" alt="">
+                    <h3>Aplicación de escritorio</h3>
+                    <p>Lenguaje: Java, MySQL</p>
+                </div>
+            </a>
+            <a href="proyecto4.html">
+                <div class="proy-box">
+                    <img src="img/proyecto4.png" alt="">
+                    <h3>Pagina web</h3>
+                    <p>Lenguaje: HTML, CSS</p>
+                </div>
+            </a>
+            <a href="proyecto5.html">
+            <div class="proy-box">
+                <img src="img/proyecto8.png" alt="">
+                <h3>Página web</h3>
+                <p>Lenguaje: HTML, CSS</p>
+            </div>
+            </a>
+            <a href="proyecto6.html">
+                <div class="proy-box">
+                    <img src="img/proyecto9.png" alt="">
+                    <h3>Pagina web</h3>
+                    <p>Lenguaje: HTML, CSS</p>
+                </div>
+            </a>
+            <a href="proyecto7.html">
+                <div class="proy-box">
+                    <img src="img/proyecto6.png" alt="">
+                    <h3>Aplicación de escritorio</h3>
+                    <p>Lenguaje: Java, MySQL</p>
+                </div>
+            </a>
+            
+            <a href="proyecto8.html">
+                <div class="proy-box">
+                    <img src="img/proyecto5.png" alt="">
+                    <h3>Aplicación de escritorio</h3>
+                    <p>Lenguaje: C++</p>
+                </div>
+            </a>
+            <a href="proyecto9.html">
+                <div class="proy-box">
+                    <img src="img/proyecto3.png" alt="">
+                    <h3>Pagina web</h3>
+                    <p>Lenguaje: HTML, CSS</p>
+                </div>
+            </a>
+            
+        </div>
+    </section>
+    
+    <section id="sobreMi">
+        <img src="img/progra.jpg" alt="">
+        <div class="sobreMi-texto">
+            <p>¿QUIEN SOY?</p>
+            <h2>Katherine Trujillo</h2>
+            <p> Me caracterizo por ser una mujer sumamente responsable,
+                comprometida en mi trabajo, soy una persona colaborativa,
+                entusiasta, con gran capacidad para gestionar proyectos y
+                resolución de problemas. Tengo gran interés en comenzar mi
+                vida laboral en una entidad que me permita desarrollarme y
+                crecer laboralmente. Cuento con  que mis conocimientos a lo
+                largo de mi carrera estudiantil aporte  al engrandecimiento de
+                cualquier empresa y por su puesto al país.</p>
+                <img src="img/yo.png" alt="">
+        </div>
+    </section>
+
+    <script>
+// Seleccionamos la sección que queremos animar
+const sobreMi = document.querySelector('#sobreMi');
+
+// Creamos un observador para detectar cuándo está en la vista
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Si la sección es visible, añadimos la clase
+            sobreMi.classList.add('visible');
+        } else {
+            // Si la sección deja de ser visible, quitamos la clase
+            sobreMi.classList.remove('visible');
+        }
+    });
+});
+// Observamos el elemento #sobreMi
+observer.observe(sobreMi);
+    </script>
+
+<footer id="pie">
+    <div class="contenido-pie">
+
+        <div class="nombre">
+            <img src="img/logo3.png" alt="">
+            <div class="nombre-txt">
+                <h2>Katherine Trujillo</h2>
+                <p>PROGRAMADORA</p>
+            </div>
+        </div>
+
+        <div class="div">
+            <div class="contacto">
+                <h2>Contacto</h2>
+                <ul>
+                    <li>Correo: <span>ktrujillo403@gmail.com</span></li>
+                    <li>Numero: <span>4642-8609</span></li>
+                    <li>LinkedIn: <span> Katherine Trujillo</span></li>
+                    <li>GitHub: <span>Kathhx</span></li>
+                </ul>
+            </div>
+
+            <div class="enlaces">
+                <h2>Enlaces</h2>
+                <div class="img-enlaces">
+                <a href="mailto:ktrujillo403@gmail.com"><img src="img/social.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/katherine-trujillo-65b890293/"> <img src="img/linkedin.png" alt=""></a>
+                <a href="https://github.com/Kathhx"><img src="img/git.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<p class="autor">&copy; 2024 Katherine Trujillo. Todos los derechos reservados.</p>
+
+</footer>
+</body>
+</html>
